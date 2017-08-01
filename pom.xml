@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.lemon</groupId>
+    <artifactId>lemon-framework</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>lemon-framework</name>
+	<description>lemon framework</description>
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>lonyee</name>
+			<email>lonyee@live.com</email>
+			<organization>lemon-china</organization>
+			<organizationUrl>http://www.lemon-china.com</organizationUrl>
+		</developer>
+	</developers>
+
+    <properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<logback.version>1.1.11</logback.version>
+		<jackson.version>2.8.7</jackson.version>
+		<guava.version>18.0</guava.version>
+		<joda.version>2.9.7</joda.version>
+		<servlet.version>3.1.0</servlet.version>
+		<xstream.version>1.4.8</xstream.version>
+		<httpclient.version>4.5.3</httpclient.version>
+		<junit.version>3.8.1</junit.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-access</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+	      <groupId>com.fasterxml.jackson.core</groupId>
+	      <artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+	      <scope>compile</scope>
+	    </dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		<!-- 时间/日期库 -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda.version}</version>
+		</dependency>
+		<!-- 引入servlet -->
+		<dependency>
+    		<groupId>javax.servlet</groupId>
+    		<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+    	</dependency>
+    	<!-- httpclient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${httpclient.version}</version>
+		</dependency>		
+		<!-- xml支持 -->
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>${xstream.version}</version>
+		</dependency>
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+		  <version>${junit.version}</version>
+	      <scope>test</scope>
+	    </dependency>
+  </dependencies>
+</project>
