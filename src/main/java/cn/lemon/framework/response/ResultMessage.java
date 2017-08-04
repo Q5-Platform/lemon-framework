@@ -78,29 +78,7 @@ public class ResultMessage {
 	public static final ResultMessage F5021 = new ResultMessage(5021, "手机验证码发送失败");
 	/** 存在子节点数据 */
 	public static final ResultMessage F6002 = new ResultMessage(6002, "删除失败，存在子节点数据");
-	/** 数据签名验证失败 */
-	public static final ResultMessage F8001 = new ResultMessage(8001, "数据签名验证失败");
-	/** 调起支付失败，错误代码：%s，错误信息：%s*/
-	public static final ResultMessage F8002 = new ResultMessage(8002, "调起支付失败，错误代码：%s，错误信息：%s");
-	/** 调起支付失败 %s*/
-	public static final ResultMessage F8003 = new ResultMessage(8003, "调起支付失败 %s");
-	/** 支付失败，错误代码：%s，错误信息：%s*/
-	public static final ResultMessage F8004 = new ResultMessage(8004, "支付失败，错误代码：%s，错误信息：%s");
-	/** 支付失败 %s*/
-	public static final ResultMessage F8005 = new ResultMessage(8005, "支付失败 %s");
-	
-	/** 提现转账失败，错误代码：%s，错误信息：%s*/
-	public static final ResultMessage F8012 = new ResultMessage(8012, "提现转账失败，错误代码：%s，错误信息：%s");
-	/** 提现转账失败 %s*/
-	public static final ResultMessage F8013 = new ResultMessage(8013, "提现转账失败 %s");
-	/** 发放红包失败，错误代码：%s，错误信息：%s*/
-	public static final ResultMessage F8022 = new ResultMessage(8022, "发放红包失败，错误代码：%s，错误信息：%s");
-	/** 发放红包失败 %s*/
-	public static final ResultMessage F8023 = new ResultMessage(8023, "发放红包失败 %s");
-	/** 退款失败，错误代码：%s，错误信息：%s*/
-	public static final ResultMessage F8032 = new ResultMessage(8032, "退款失败，错误代码：%s，错误信息：%s");
-	/** 退款失败 %s*/
-	public static final ResultMessage F8033 = new ResultMessage(8033, "退款失败 %s");
+
 	
 	private int code;
 	private String message;
