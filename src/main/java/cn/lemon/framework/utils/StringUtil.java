@@ -96,6 +96,18 @@ public class StringUtil {
 		}
 		return true;
 	}
+	
+	/**
+	 * 检查密码是否正确，字母和数字构成，不能超过16位
+	 */
+	public static boolean isPassword(String value) {
+		if (value == null || value.length() == 0) {
+			return false;
+		}
+		Pattern p = Pattern.compile("[a-zA-Z0-9_*!@#]{6,16}");
+		Matcher m = p.matcher(value);
+		return m.matches();
+	}
 
     /**
      * 检查指定的字符串列表是否不为空。
@@ -178,8 +190,7 @@ public class StringUtil {
 	 * @param s
 	 * @return 获得图片
 	 */
-	public static List<String> getImg(String s)
-	{
+	public static List<String> getImg(String s) {
 		String regex;
 		List<String> list = Lists.newArrayList();
 		regex = "src=\"(.*?)\"";
@@ -197,8 +208,7 @@ public class StringUtil {
 	 * @param s
 	 * @return 获得第一张图片
 	 */
-	public static String getFirstImg(String s)
-	{
+	public static String getFirstImg(String s) {
 		String regex;
 		regex = "src=\"(.*?)\"";
 		Pattern pa = Pattern.compile(regex, Pattern.DOTALL);
@@ -220,8 +230,7 @@ public class StringUtil {
 	 * @param end 原始字符串超过截取长度时，后面增加字符
 	 * @return 去掉后的内容
 	 */
-	public static String subStringHTML(String con, int length, String end)
-	{
+	public static String subStringHTML(String con, int length, String end) {
 		String content = "";
 		if (con != null)
 		{

@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 import cn.lemon.framework.utils.JsonUtil;
-import cn.lemon.framework.utils.SerialNumberUtil;
-import cn.lemon.framework.utils.SerialUUIDUtil;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.google.common.base.Objects;
@@ -60,27 +58,6 @@ public abstract class BasicEntityBean<I> implements Serializable {
 	}
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
-	}
-	
-	/**
-	 * 生成唯一ID 19位
-	 */
-	public Long generateId() {
-		return SerialNumberUtil.instance().nextId();
-	}
-	
-	/**
-	 * 生成唯一UUID 32位
-	 */
-	public String generateUUId() {
-		return SerialUUIDUtil.instance().nextId();
-	}
-	
-	/**
-	 * 生成短UUID 12位
-	 */
-	public String generateShortUUId() {
-		return SerialUUIDUtil.instance().nextShortId();
 	}
 	
 	@Override

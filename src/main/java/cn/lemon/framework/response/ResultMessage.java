@@ -1,12 +1,15 @@
 package cn.lemon.framework.response;
 
+import java.io.Serializable;
+
 
 /**
  * 返回消息伪枚举 - 使用时可以直接继承扩展
  * @author lonyee
  *
  */
-public class ResultMessage {
+public class ResultMessage implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	/** 操作成功 */
 	public static final ResultMessage SUCCESS = new ResultMessage(2000, "操作成功");
@@ -50,18 +53,18 @@ public class ResultMessage {
 	public static final ResultMessage F2021 = new ResultMessage(2000, "密码重置成功，新密码为 %s ");
 	
 	//****** 操作异常的提示 ***************//
-	/** 用户名或密码错误 */
-	public static final ResultMessage F5001 = new ResultMessage(5001, "用户名或密码错误");
+	/** 手机号码或密码错误 */
+	public static final ResultMessage F5001 = new ResultMessage(5001, "账号或密码错误");
 	/** 当前登录密码错误 */
 	public static final ResultMessage F5002 = new ResultMessage(5002, "当前登录密码错误");
 	/** 手机号错误 */
-	public static final ResultMessage F5003 = new ResultMessage(5003, "手机号错误");
+	public static final ResultMessage F5003 = new ResultMessage(5003, "手机号码错误");
 	/** 验证码错误 */
 	public static final ResultMessage F5004 = new ResultMessage(5004, "验证码错误");
-	/** 用户名不能为空 */
-	public static final ResultMessage F5005 = new ResultMessage(5005, "用户名不能为空");
-	/** 用户名已存在 */
-	public static final ResultMessage F5006 = new ResultMessage(5006, "用户名已存在");
+	/** 账号不能为空 */
+	public static final ResultMessage F5005 = new ResultMessage(5005, "账号不能为空");
+	/** 手机号码已存在 */
+	public static final ResultMessage F5006 = new ResultMessage(5006, "手机号码已存在");
 	/** 授权信息获取失败 */
 	public static final ResultMessage F5007 = new ResultMessage(5007, "授权信息获取失败");
 	/** 授权用户信息获取失败 */
@@ -72,6 +75,8 @@ public class ResultMessage {
 	public static final ResultMessage F5010 = new ResultMessage(5010, "模板消息发送失败");
 	/** 认证URL获取失败 */
 	public static final ResultMessage F5011 = new ResultMessage(5011, "认证URL获取失败");
+	/** 密码格式错误 */
+	public static final ResultMessage F5012 = new ResultMessage(5012, "密码格式错误");
 	/** 1小时内最多只能发送%s次验证码 */
 	public static final ResultMessage F5020 = new ResultMessage(5020, "1小时内最多能发送%s次验证码");
 	/** 手机验证码发送失败 */

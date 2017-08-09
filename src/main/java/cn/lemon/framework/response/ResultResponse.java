@@ -67,7 +67,11 @@ public class ResultResponse {
      */
     public ResultResponse success(ResultMessage resultMessage, Object... args) {
     	ResultResponse resultResponse = new ResultResponse();
-    	resultResponse.setMeta(new Meta(resultMessage.getCode(), String.format(resultMessage.getMessage().contains("%s")? resultMessage.getMessage() : resultMessage.getMessage()+"，%s", args)));
+    	String message = resultMessage.getMessage();
+    	if (args.length>0) {
+    		message = String.format(resultMessage.getMessage().contains("%s")? resultMessage.getMessage() : resultMessage.getMessage()+"，%s", args);
+    	}
+    	resultResponse.setMeta(new Meta(resultMessage.getCode(), message));
     	resultResponse.setData(null);
         return resultResponse;
     }
@@ -102,8 +106,11 @@ public class ResultResponse {
      */
     public ResultResponse failure(ResultMessage resultMessage, Object... args) {
     	ResultResponse resultResponse = new ResultResponse();
-    	resultMessage = resultMessage!=null? resultMessage: ResultMessage.FAILURE;
-    	resultResponse.setMeta(new Meta(resultMessage.getCode(), String.format(resultMessage.getMessage().contains("%s")? resultMessage.getMessage() : resultMessage.getMessage()+"，%s", args)));
+    	String message = resultMessage.getMessage();
+    	if (args.length>0) {
+    		message = String.format(resultMessage.getMessage().contains("%s")? resultMessage.getMessage() : resultMessage.getMessage()+"，%s", args);
+    	}
+    	resultResponse.setMeta(new Meta(resultMessage.getCode(), message));
     	resultResponse.setData(null);
         return resultResponse;
     }

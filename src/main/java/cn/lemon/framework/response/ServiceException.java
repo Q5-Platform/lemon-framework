@@ -1,7 +1,11 @@
 package cn.lemon.framework.response;
 
-
-public class ServiceException extends RuntimeException {
+/**
+ * 异常处理类
+ * @date 2017年8月8日 下午3:52:12 <br>
+ * @author lonyee
+ */
+public class ServiceException extends Exception {
 
 	private static final long serialVersionUID = 6654830544228411564L;
 	
