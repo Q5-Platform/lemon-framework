@@ -31,8 +31,7 @@ public class ServiceException extends Exception {
 	
 	public ServiceException(ResultMessage errorMessage, Object... args){
 		super(String.format(errorMessage.getMessage().contains("%s")? errorMessage.getMessage() : errorMessage.getMessage()+"，%s", args));
-		this.errorMessage.setMessage(this.getMessage());
-		this.errorMessage = errorMessage;
+		this.errorMessage = new ResultMessage(errorMessage.getCode(), this.getMessage());
 	}
 	
 	public ServiceException(ResultMessage errorMessage){
