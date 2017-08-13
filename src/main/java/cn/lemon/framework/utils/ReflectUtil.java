@@ -4,34 +4,16 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.List;
-import java.util.Set;
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
 
 /**
  * ReflectUtil
  *
- * @author Eric
+ * @author lonyee
  * @date 16/5/27
  */
 public class ReflectUtil {
-
-    /**
-     * 基础类型的集合,用于判断一个字段是否属于8大基础类型, 或者String, Date等可以映射到数据库列的类型
-     */
-    private final static Set<String> primitiveTypes = Sets.newHashSet(
-            "java.lang.Integer",
-            "java.lang.Double",
-            "java.lang.Float",
-            "java.lang.Long",
-            "java.lang.Short",
-            "java.lang.Byte",
-            "java.lang.Boolean",
-            "java.lang.Character",
-            "java.lang.String",
-            "java.service.Date",
-            "int","double","long","short","byte","boolean","char","float");
 
     /**
      * 获取成员变量的修饰符
@@ -228,11 +210,6 @@ public class ReflectUtil {
             if (fields[i].getModifiers() != Modifier.PRIVATE) {
                 continue;
             }
-
-            if (!primitiveTypes.contains(fields[i].getType().getName())) {
-                continue;
-            }
-
             result.add(fields[i]);
         }
 
