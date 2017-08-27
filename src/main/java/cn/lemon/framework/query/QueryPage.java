@@ -14,7 +14,7 @@ public class QueryPage extends Page {
 	private static final long serialVersionUID = 8981998004403741046L;
 	
 	/** 查询条件 */
-	private Map<String, Object> condition = Maps.newConcurrentMap();
+	private Map<String, Object> condition = Maps.newHashMap();
 	/** 排序方式，根据设置字段的前后顺序 */
 	private Map<String, Object> sort = Maps.newTreeMap();
 	
