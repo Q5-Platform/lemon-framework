@@ -194,7 +194,8 @@ public class BeanUtil {
 				Method methodvo = null;
 				methodvo = ReflectUtil.getMethod(voclazz, setterName);
 				if (methodvo != null){
-					methodvo.invoke(entityvo, arrayObject[i]);
+					Object object = arrayObject[i];
+					methodvo.invoke(entityvo, object);
 				}
 			}
 			catch (Exception ex){
