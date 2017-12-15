@@ -11,11 +11,15 @@ public class Md5Util {
 	private static char[] digit = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
 
 	public static String getMD5(String source) {
+		byte[] temp = (source!=null? source: "").getBytes();
+		return getMD5(temp);
+	}
+
+	public static String getMD5(byte[] source) {
 		try {
 			StringBuilder result = new StringBuilder();
-			byte[] temp = (source!=null? source: "").getBytes();
 			MessageDigest digest = MessageDigest.getInstance("MD5");
-			digest.update(temp);
+			digest.update(source);
 			byte[] b = digest.digest();
 			for (int i = 0; i < b.length; i++) {
 				char[] ob = new char[2];
