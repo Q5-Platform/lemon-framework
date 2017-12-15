@@ -44,6 +44,8 @@ public class ResultMessage implements Serializable {
 	public static final ResultMessage F4060 = new ResultMessage(4060, "客户端不接受所请求的MIME类型");
 	/** 图片上传失败，请检查网络设置 */
 	public static final ResultMessage F4070 = new ResultMessage(4070, "图片上传失败，请检查网络设置");
+	/** 参数不能为空 */
+	public static final ResultMessage F4080 = new ResultMessage(4080, "参数不能为空，%s");
 	/** 服务器内部异常 */
 	public static final ResultMessage F5000 = new ResultMessage(5000, "服务器内部异常");
 	
