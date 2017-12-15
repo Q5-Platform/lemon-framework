@@ -34,8 +34,8 @@ public class ResultMessage implements Serializable {
 	public static final ResultMessage F4010 = new ResultMessage(401, "访问超时，请重新登陆");
 	/** 不支持的媒体类型 */
 	public static final ResultMessage F4150 = new ResultMessage(4150, "不支持的媒体类型");
-	/** 没有页面访问权限 */
-	public static final ResultMessage F4030 = new ResultMessage(403, "没有页面访问权限");
+	/** 没有接口访问权限 */
+	public static final ResultMessage F4030 = new ResultMessage(403, "没有接口访问权限");
 	/** 没有找到请求的接口资源 */
 	public static final ResultMessage F4040 = new ResultMessage(4040, "没有找到请求的接口资源");
 	/** 不支持的请求方法 GET,POST */
