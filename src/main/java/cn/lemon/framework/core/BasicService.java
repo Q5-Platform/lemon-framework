@@ -13,25 +13,4 @@ import cn.lemon.framework.utils.SerialUUIDUtil;
  */
 public abstract class BasicService {
 	protected Logger logger = LoggerFactory.getLogger(this.getClass());
-	
-	/**
-	 * 生成唯一ID 19位
-	 */
-	public Long generateId() {
-		return SerialNumberUtil.instance().nextId();
-	}
-	
-	/**
-	 * 生成唯一UUID 32位
-	 */
-	public String generateUUId() {
-		return SerialUUIDUtil.instance().nextId();
-	}
-	
-	/**
-	 * 生成短UUID 12位
-	 */
-	public String generateShortUUId() {
-		return SerialUUIDUtil.instance().nextShortId();
-	}
 }

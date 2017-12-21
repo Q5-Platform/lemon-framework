@@ -41,7 +41,21 @@ public class StringUtil {
 		boolean ipAddress = mat.find();
 		return ipAddress;
 	}
-	
+
+	/**
+	 * 正则匹配字符串是否存在相关内容
+	 */
+	public static boolean isMatchNumber(String numberStr, String regex){
+		Pattern pattern = Pattern.compile(regex);
+		Matcher match = pattern.matcher(numberStr);
+		return match.find();
+	}
+
+	/**
+	 * 正则简单匹配是否手机号
+	 * @param mobile
+	 * @return
+	 */
 	public static boolean isMobile(String mobile) {
 		Pattern pattern = Pattern.compile("^[1][0-9]{10}$");
 		Matcher m = pattern.matcher(mobile);
